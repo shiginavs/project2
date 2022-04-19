@@ -1,0 +1,32 @@
+h1, a{
+  text-align: center;
+  font-size: 30px;
+}
+
+.block-welcome{
+  max-width: 580px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.block-welcome h1{
+  margin-bottom: 40px;
+}
+
+.block-welcome a{
+  display: block;
+  background: #29aafe;
+  line-height: 1;
+  padding: 20px 0;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+a:hover, a:focus{
+  opacity: 0.7;
+}

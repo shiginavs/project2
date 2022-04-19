@@ -1,0 +1,8 @@
+.input-group{
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+
+span{
+  line-height: 1.3;
+}

@@ -1,0 +1,52 @@
+<p>feedback works!</p>
+<div class="feedback-block login-block">
+  <h1>Форма обратной связи</h1>
+
+  <div class="alert alert-{{message.type}}" *ngIf="message.text">
+    {{message.text}}
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <div class="form-group" [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-email ti-email"></i> </span>
+        <input type="email" class="form-control" placeholder="Введите ваш email" formControlName="email">
+      </div>
+
+      <span class="form-help-text" *ngIf="form.get('email')?.['invalid'] && form.get('email')?.['touched']">
+        <span *ngIf="form.get('email').errors?.['required']">Email не должен быть пустым</span>
+        <span *ngIf="form.get('email').hasError('email')">Email некорректный</span>
+
+      </span>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user ti-user"></i> </span>
+        <input type="text" class="form-control" placeholder="Введите ваше имя" formControlName="name">
+      </div>
+
+      <span class="form-help-text" *ngIf="form.get('name').invalid && form.get('name').touched">
+        <span *ngIf="form.get('name')['errors']['required']">Поле ФИО не может быть пустым</span>
+      </span>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': form.get('message').invalid && form.get('message').touched}">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-lock ti-unlock"></i> </span>
+        <input type="textarea" class="form-control" placeholder="Ваше сообщение" formControlName="message">
+      </div>
+
+      <span class="form-help-text" *ngIf="form.get('message').invalid && form.get('message').touched">
+        <span *ngIf="form.get('message').hasError('required')">Напишите ваше сообщение</span>
+
+      </span>
+    </div>
+
+
+
+    <button class="btn btn-primary btn-block" type="submit" [disabled]="form.invalid">Отправить сообщение</button>
+  </form>
+</div>
+
+

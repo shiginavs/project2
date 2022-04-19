@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "email": "viktoria.shigina@yandex.ru",
+      "password": "123456789",
+      "name": "Administrator"
+    },
+    {
+      "id": 2,
+      "email": "test@yandex.ru",
+      "password": "1234567890",
+      "name": "Administrator2"
+    },
+    {
+      "email": "viktoria.shigina@yandex.ru",
+      "password": "12345689",
+      "name": "sdfghj",
+      "id": 3
+    }
+  ],
+  "messageForm": [
+    {
+      "email": "viktoria.shigina@yandex.ru",
+      "name": "hgg",
+      "message": "fgh",
+      "id": 1
+    },
+    {
+      "email": "viktoria.shigina@yandex.ru",
+      "name": "hgg",
+      "message": "fgh",
+      "id": 2
+    },
+    {
+      "email": "viktoria.shigina@yandex.ru",
+      "name": ";lkjhgfdsa",
+      "message": "zdfghjkl",
+      "id": 3
+    }
+  ]
+}
